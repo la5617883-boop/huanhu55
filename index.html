@@ -26,11 +26,10 @@
         .seasons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
         .season { padding: 15px; background: #f8f9fa; border-radius: 8px; }
         .season strong { color: #3498db; }
-        .price-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; text-align: center; margin: 20px 0; }
-        .price-box h3 { margin-bottom: 15px; }
-        .price-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
-        .price-item:last-child { border-bottom: none; }
-        .price-highlight { font-size: 1.5em; font-weight: bold; color: #ffd700; }
+        .cost-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; text-align: center; margin: 20px 0; }
+        .cost-box h3 { margin-bottom: 15px; }
+        .cost-note { font-size: 0.95em; line-height: 1.8; opacity: 0.9; }
+        .cost-note p { margin-bottom: 10px; }
         .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .schedule-item { background: #f8f9fa; padding: 20px; border-radius: 10px; }
         .schedule-item .date { font-weight: bold; color: #3498db; }
@@ -40,6 +39,10 @@
         .cost-table th, .cost-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
         .cost-table th { background: #3498db; color: white; }
         .cost-table tr:hover { background: #f8f9fa; }
+        .group-info { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .group-info h3 { color: #2c3e50; margin-bottom: 10px; }
+        .group-info ul { margin-left: 20px; }
+        .group-info li { margin-bottom: 8px; color: #555; }
         .contact { text-align: center; padding: 40px 0; }
         .xiaohongshu { display: inline-block; background: #ff2442; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-size: 1.1em; }
         footer { text-align: center; padding: 20px; color: #7f8c8d; font-size: 0.9em; }
@@ -85,28 +88,28 @@
             <h2>📍 途径地点</h2>
             <p>起点：Большое Голоустное（大戈洛乌斯特诺耶）→ 途经：Большие Коты（大科蒂）→ 终点：Листвянка（利斯特维扬卡）</p>
             <div style="text-align: center; margin: 20px 0;">
-                <img src="map.png" alt="贝加尔湖徒步线路地图" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                <img src="https://huanhu55-1416399307.cos.ap-guangzhou.myqcloud.com/map.png" alt="贝加尔湖徒步线路地图" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
             </div>
         </section>
 
         <section>
-            <h2>✨ 核心卖点</h2>
+            <h2>✨ 这条线的特点</h2>
             <div class="highlights">
                 <div class="highlight-item">
-                    <h3>世界级纯净自然</h3>
-                    <p>贝加尔湖被称为"西伯利亚明眸"，湖水透明度达40米，世界最深湖泊</p>
+                    <h3>世界最深湖泊</h3>
+                    <p>贝加尔湖湖水透明度达40米，被称为"西伯利亚明眸"，风景极为纯净</p>
                 </div>
                 <div class="highlight-item">
-                    <h3>四季极致景观</h3>
-                    <p>春花、夏绿、秋叶、冬雪，每个季节都是完全不同的体验</p>
+                    <h3>四季风景各异</h3>
+                    <p>春花、夏绿、秋叶、冬雪，每个季节走同一条路是完全不同的体验</p>
                 </div>
                 <div class="highlight-item">
-                    <h3>低商业化原始体验</h3>
-                    <p>相比环湖自驾，徒步路线更加原始、小众，人少景美</p>
+                    <h3>人少景美的徒步路线</h3>
+                    <p>只有原始的自然美，没有游客大巴和旅行团的喧嚣</p>
                 </div>
                 <div class="highlight-item">
-                    <h3>西伯利亚文化沉浸</h3>
-                    <p>途经俄罗斯村落，体验当地风土人情</p>
+                    <h3>沿途经过俄罗斯村落</h3>
+                    <p>大戈洛乌斯特诺耶、利斯特维扬卡，途经当地人生活区，感受西伯利亚村庄氛围</p>
                 </div>
             </div>
         </section>
@@ -128,128 +131,69 @@
 
         <section>
             <h2>💰 价格</h2>
-            <div class="price-box">
+            <div class="cost-box">
                 <h3>基础价格（不含往返机票）</h3>
-                <div class="price-item">
-                    <span>两天一团</span>
-                    <span class="price-highlight">3660元/人</span>
+                <div class="cost-note">
+                    <p>两天一团：<strong>3660元/人</strong></p>
+                    <p>三天一团：<strong>4260元/人</strong></p>
+                    <p>⭐ 5-8人成团</p>
                 </div>
-                <div class="price-item">
-                    <span>三天一团</span>
-                    <span class="price-highlight">4260元/人</span>
-                </div>
-                <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">⭐ 5-8人成团</p>
             </div>
-            <p><strong>费用包含：</strong>徒步途中的餐饮、接送机及伊尔库茨克至徒步点的往返交通、行李转运、领队、翻译、保险、国家公园门票</p>
-            <p><strong>不含：</strong>往返伊尔库茨克机票、伊尔库茨克住宿、徒步途中的木屋住宿、个人消费</p>
+            <p><strong>费用包含：</strong>徒步途中的餐饮、接送机及伊尔库茨克至徒步点的往返交通、行李转运、向导翻译、保险、国家公园门票</p>
+            <p><strong>不含：</strong>往返伊尔库茨克机票、伊尔库茨克住宿、徒步途中的个人消费</p>
         </section>
 
         <section>
-            <h2>👥 成团规则与团购优惠</h2>
-            <p>本路线为贝加尔湖南岸精品徒步小团，<strong>5人即可成团，每团上限8人</strong>，拒绝拥挤大团，保证深度体验。</p>
-            <div style="margin-top: 20px;">
-                <div class="season"><strong>5-8人团购：</strong>标准价格，无额外折扣</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>📅 2026年行程安排</h2>
+            <h2>📅 2026年组队计划</h2>
             <table class="cost-table">
                 <thead>
                     <tr>
                         <th>批次</th>
                         <th>日期</th>
                         <th>类型</th>
-                        <th>行程</th>
-                        <th>价格</th>
+                        <th>天数</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>第1批</td>
-                        <td>5月1日-3日</td>
-                        <td>劳动节</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
+                        <td>6月19日-21日</td>
+                        <td>端午节</td>
+                        <td>三天</td>
                     </tr>
                     <tr>
                         <td>第2批</td>
-                        <td>5月22日-24日</td>
+                        <td>7月10日-12日</td>
                         <td>平日</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
+                        <td>三天</td>
                     </tr>
                     <tr>
                         <td>第3批</td>
-                        <td>6月5日-6日</td>
+                        <td>8月7日-9日</td>
                         <td>平日</td>
-                        <td>两天团</td>
-                        <td>3660元</td>
+                        <td>三天</td>
                     </tr>
                     <tr>
                         <td>第4批</td>
-                        <td>6月19日-21日</td>
-                        <td>端午节</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
+                        <td>9月19日-21日</td>
+                        <td>中秋节</td>
+                        <td>三天</td>
                     </tr>
                     <tr>
                         <td>第5批</td>
-                        <td>7月10日-12日</td>
-                        <td>平日</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
-                    </tr>
-                    <tr>
-                        <td>第6批</td>
-                        <td>7月24日-25日</td>
-                        <td>平日</td>
-                        <td>两天团</td>
-                        <td>3660元</td>
-                    </tr>
-                    <tr>
-                        <td>第7批</td>
-                        <td>8月6日-8日</td>
-                        <td>平日</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
-                    </tr>
-                    <tr>
-                        <td>第8批</td>
-                        <td>8月20日-21日</td>
-                        <td>平日</td>
-                        <td>两天团</td>
-                        <td>3660元</td>
-                    </tr>
-                    <tr>
-                        <td>第9批</td>
-                        <td>9月4日-6日</td>
-                        <td>平日</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
-                    </tr>
-                    <tr>
-                        <td>第10批</td>
-                        <td>9月19日-21日</td>
-                        <td>中秋节</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
-                    </tr>
-                    <tr>
-                        <td>第11批</td>
                         <td>10月2日-4日</td>
                         <td>国庆节</td>
-                        <td>三天团</td>
-                        <td>4260元</td>
+                        <td>三天</td>
                     </tr>
                 </tbody>
             </table>
-            <p><em>* 具体日期可能根据实际情况微调，报名前确认</em></p>
+            <p><em>* 具体日期可能根据多数人的时间略有调整，进群确认</em></p>
         </section>
 
         <div class="contact">
-            <p>📱 了解更多行程详情</p>
-            <a href="https://www.xiaohongshu.com/user/profile/xxxx" class="xiaohongshu">小红书：俄罗斯体验官</a>
+            <p>📱 联系我们</p>
+            <p style="font-size: 1.2em; margin: 15px 0;">📞 电话：18618375879</p>
+            <p style="font-size: 1.2em; margin: 15px 0;">💬 微信：youla7982</p>
         </div>
 
         <footer>
